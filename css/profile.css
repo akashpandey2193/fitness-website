@@ -27,7 +27,7 @@ body {
 .description {
   border-radius: 8px;
   border: 1px solid #00000026;
-  box-shadow: 0px 2px 2px #00000082;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   margin: 100px 10px 10px 10px;
   padding: 15px;
   line-height: 1.8;
@@ -37,7 +37,7 @@ body {
 .work-exp-container {
   border-radius: 8px;
   border: 1px solid #00000026;
-  box-shadow: 0px 2px 2px #00000082;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   margin: 10px;
   padding: 15px 15px 4px 15px;
   line-height: 1.8;
@@ -171,7 +171,7 @@ body {
   justify-content: space-evenly;
   border-radius: 8px;
   border: 1px solid #00000026;
-  box-shadow: 0px 2px 2px #00000082;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   margin: 10px;
   padding: 8px;
   line-height: 1.8;
