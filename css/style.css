@@ -5,50 +5,140 @@
   box-sizing: border-box;
 }
 
-body{
-  padding-bottom: 40px;
+html,body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-a {
+.no_select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.top-nav li a {
+  color: #fff;
+}
+
+.top-nav li:hover a, top-nav li:hover a:link {
+  color: #000;
+}
+
+a:link, a:visited {
   text-decoration: none;
   outline: none;
+  color: #67008B;
+}
+
+.copyright-text, .author-text {
+  font-family: 'Roboto Condensed';
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.diets-section {
+  padding: 20px 10px;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.4;
+}
+
+.diets-section ul {
+  list-style-position: inside;
+}
+
+.diets-section li {
+  cursor: pointer;
+}
+
+.diets-item {
+  border: 1px solid #00000026;
+  box-shadow: 0px 2px 2px #00000082;
+  margin: 10px;
+  padding: 15px;
+  line-height: 1.8;
+}
+
+.diets-item img {
+  display: block;
+  height: auto;
+  width: 870px;
+  max-width: 100%;
+}
+
+.diets-item h2 {
+  padding-bottom: 5px;
+  font-family: 'Roboto Condensed';
+}
+
+.diet-item-desc {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .footer {
-  background: rgba(13, 13, 13, 0.8);
+  background:#254f9c;
   color: white;
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
   width: 100%;
   font-size: 10px;
   padding: 10px;
   display: flex;
-  /* align-content: center; */
   justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed';
 }
 
-.copyright-text {
-  font-family: sans-serif;
-  letter-spacing: 2px;
+.main-body {
+  position: fixed;
+  top: 60px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }
 
-.made-by-text {
-  margin-left: auto;
+.sub-heading {
+  font-weight: 700;
+}
+
+.sub-heading-desc {
+  opacity: 0.8;
 }
 
 .top-nav {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  /* background-color: #abcdef; */
   width: 100%;
-  background: rgba(13, 13, 13, 0.8);
+  display: flex;
+  background:#254f9c;
   color: #fff;
   z-index: 1;
+  height: 60px;
+  max-height: 60px;
+}
+
+.top-nav ul {
+  display: inline-block;
+  margin-left: auto;
 }
 
 .top-nav li {
   display: inline-block;
-  padding: 20px;
+  padding: 18px;
   font-size: 20px;
-  font-family: 'Chela One';
+  font-family: 'Roboto Condensed';
   cursor: pointer;
 }
 
@@ -57,11 +147,18 @@ a {
   background: #fff;
 }
 
+.top-nav h2 {
+  display: inline-block;
+  font-family: 'Ubuntu';
+  align-self: center;
+  padding: 20px 4px;
+}
+
 .header-background-image {
-  background-image: linear-gradient(to right bottom,rgba(23, 227, 227, 0.8), rgba(40, 180, 131, 0.8)),url('/src/images/background.jpg');
+  background-image: linear-gradient(to right bottom,rgba(23, 114, 227, 0.28), rgba(40, 77, 180, 0.01)),url('/src/images/background.jpg');
   background-position:bottom;
   background-size: cover;
-  height: 85vh;
+  height: 87vh;
   clip-path: polygon(0 0 , 100% 0, 100% 90%, 0 100%);
 }
 
@@ -71,14 +168,13 @@ a {
   top: 40%;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Bangers';
-
+  font-family: 'Roboto Condensed';
 }
 
 .heading-main {
   letter-spacing: 17px;
   display: block;
-  font-size: 70px;
+  font-size: 80px;
   animation-name: moveInLeft;
   animation-duration: 800ms;
   backface-visibility: hidden;
@@ -117,4 +213,120 @@ a {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+.dropdown-btn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .heading-main {
+    font-size: 45px;
+  }
+  .heading-main-sub {
+    font-size: 20px;
+  }
+  .header-background-image {
+    height: 82vh;
+  }
+  .heading a {
+    font-size: 25px;
+  }
+  .top-nav h2 {
+    margin: 0 auto;
+  }
+  .top-nav ul {
+    display: none;
+  }
+
+  .dropdown-btn {
+    display: inherit;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .diets-item img {
+    margin: 0 auto;
+  }
+}
+/*  DropDown Style  */
+
+
+.dropdown-btn img{
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-content a{
+  display: none;
+}
+
+.display-mobile-menu {
+  width: 150px;
+  height: 131px;
+  opacity: 1;
+  background-color:#254f9c;
+  /* display: inherit; */
+}
+
+.display-mobile-menu a {
+  display: inherit;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #FFF;
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-btn:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.links {
+  margin: 0 auto;
+}
+.links a {
+  padding: 4px;
+  cursor: pointer;
+}
+.links a img {
+  height: 20px;
 }

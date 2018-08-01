@@ -3,38 +3,180 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet"> -->
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
-        <title>Scratch</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <script src="js/main.js"></script>
+        <title>Fitness Tips and Tricks</title>
     </head>
     <body>
       <header class="top-nav">
-        <ul>
-          <li>Home</li>
-          <li>Content</li>
-          <li>About</li>
+        <h2>Fitness Tips and Tricks</h2>
+        <div class="dropdown">
+          <div class="dropdown-btn" onclick="toggleMobileMenu()">
+            <img src="src/images/drop-down.svg" alt="drop-down">
+          </div>
+          <div id="mobile-dropdown-menu" class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Content</a>
+            <a href="/about.html">About</a>
+          </div>
+        </div>
+        <ul class="no_select">
+          <li><a href="">Home</a></li>
+          <li><a href="">Content</a></li>
+          <li><a href="/about.html">About</a></li>
         </ul>
       </header>
-      <div class="header-background-image">
-        <h1 class="heading">
-          <span class="heading-main">Welcome</span>
-          <span class="heading-main-sub">Get everything here</span>
-          <div>
-            <a href="#">Go to Plans</a>
-          </div>
-        </h1>
-      </div>
-      <div class="list-diets">
 
+      <div class="main-body">
+        <div class="header-background-image">
+          <h1 class="heading no_select">
+            <span class="heading-main">Welcome</span>
+            <span class="heading-main-sub">Get everything here</span>
+            <div>
+              <a onclick="scrollIdIntoView('diets')">Go to Diets</a>
+            </div>
+          </h1>
+        </div>
+
+        <div id="diets" class="diets-section diets-item no_select">
+          There are various diet one can follow in his day to day life but there are always certain pros and cons that are related to the approach we follow. These are some common diets which one can follow in order to loose weight overtime:-
+          <ul>
+            <li onclick="scrollIdIntoView('low-calorie')">Low-calorie diet</li>
+            <li onclick="scrollIdIntoView('low-fat')">Low-fat diet</li>
+            <li onclick="scrollIdIntoView('low-carb')">Low-carb diet</li>
+            <li onclick="scrollIdIntoView('ketogenic')">Ketogenic diet</li>
+            <li onclick="scrollIdIntoView('high-protein')">High-protein diet</li>
+          </ul>
+        </div>
+
+        <div id="low-calorie" class="diets-item">
+          <h2>Low-calorie Diet</h2>
+          <img src='/src/images/low-calorie-diet.jpg' alt="low-calorie"/>
+          <div class="diet-item-desc">
+            <div>
+              <span class="sub-heading">Defined as:</span>
+              <span class="sub-heading-desc">Only consuming 800 to 1,200 calories a day.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Pros:</span>
+              <span class="sub-heading-desc">The sole purpose of limiting your daily calories (and pushing the boundaries of sanity) is to lose weight ASAP—and the study analysis says it works, while also preserving as much lean muscle mass as possible.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Cons:</span>
+              <span class="sub-heading-desc">In our experience, capping your calories low will probably mean a lot of internal strife and stress. Plus, we’re big fans of enjoying food instead of fearing it, and 800 calories doesn’t leave much room for satisfied taste buds. Lastly, if you’re currently eating double to triple this amount of food, dropping to a daily caloric intake this low can tank your metabolism and actually slow weight loss more than switching to one of these other diets might.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="low-fat" class="diets-item">
+          <h2>Low-fat Diet</h2>
+          <img src='/src/images/low-fat-diet.jpg' alt="low-calorie"/>
+          <div class="diet-item-desc">
+            <div>
+              <span class="sub-heading">Defined as:</span>
+              <span class="sub-heading-desc">Getting only 20–30% of daily calories from fat; the remaining 80–70% are split between protein and carbs, typically with an emphasis on carbs.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Pros:</span>
+              <span class="sub-heading-desc"> Advocated by the Institute of Medicine, a low-fat diet (or high-carb, depending on your perspective) is based around the idea that cutting back on the most calorie-dense macro will help you eat fewer calories overall. And studies do show switching to a low-fat diet can help you lose body fat quickly, though not necessarily long-term.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Cons:</span>
+              <span class="sub-heading-desc">Eating this way perpetuates the outdated idea that dietary fat is the enemy of body fat. And it isn’t necessarily better than other diets: One study in the American Journal of Clinical Nutrition Opens a New Window. compared high-protein, normal protein, high-fat, and low-fat diets, and found no significant difference in fat loss among the groups at six months or two years (though all did result in some fat loss). What’s more, while the low-fat group was supposed to keep its intake of the macro at 20%, actual intake was closer to 26-28%, suggesting that sticking to a strict low-fat diet is rather difficult and potentially unrealistic for most.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="low-carb" class="diets-item">
+          <h2>Low-carb Diet</h2>
+          <img src='/src/images/low-carb-diet.jpg' alt="low-calorie"/>
+          <div class="diet-item-desc">
+            <div>
+              <span class="sub-heading">Defined as:</span>
+              <span class="sub-heading-desc">Getting 15–40% of daily calories from carbs; the remaining 85-60% is split between protein and fat.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Pros:</span>
+              <span class="sub-heading-desc"> Compared to eating a traditional diet, switching to a low-carb diet can significantly reduce body fat, studies show. Cap your carb intake at 20% of daily calories and the weight-loss results are even stronger—plus, you can reduce your risk for heart disease and stroke. Some research suggests low-carb diets are even better than low-fat diets: One study in Annals of Internal Medicine Opens a New Window.  found that people who limited their carbs lost eight more pounds than those who cut back on fat. If you cut back on carbs enough, your body learns to burn fat as fuel instead. Studies are mixed on how low-carb diets affect performance, but some evidence suggests that endurance performance can actually improve among people whose bodies adapt to fat-burning fairly easily.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Cons:</span>
+              <span class="sub-heading-desc">Teaching your body to burn fat instead of carbs takes time, so you have to be patient while you feel sluggish during the weeks it takes to become fat-adapted. And not every body burns fat as efficiently as carbs, so your endurance may never measure up (though, as we said before, others actually see an improvement here.) Without carbs, your body’s ability to generate explosive energy will most likely decline, so if you love sprinting Opens a New Window.  or HIIT Opens a New Window. , you might need to consume more carbs than other low-fat dieters. And while you’ll probably lose body fat, this kind of diet is actually keeping you focused on the wrong macro: Studies Opens a New Window.  have proven that the higher protein aspect of a low-carb diet helps promote weight loss, rather than the lower carb count.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="ketogenic" class="diets-item">
+          <h2>Ketogenic Diet</h2>
+          <img src='/src/images/keto-diet.jpg' alt="low-calorie"/>
+          <div class="diet-item-desc">
+            <div>
+              <span class="sub-heading">Defined as:</span>
+              <span class="sub-heading-desc">Less than 10% of daily calories from carbs, 10-30% from protein, 60-80% from fat.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Pros:</span>
+              <span class="sub-heading-desc"> Technically a subtype of low-carb diet, the keto diet is unique Opens a New Window. : By depriving your body of carbohydrates, you not only force your body to become fat-adapted, but also, if you keep protein low as well, elevate your levels of ketone bodies, which is basically a sign your body is running on fat Opens a New Window. . The keto diet puts you in a unique metabolic state called ketosis wherein your brain burns ketones instead of glucose—and, in doing so, supposedly leads to clearer thinking. Physically, eating such a high amount of fat significantly increases your body’s ability to burn body fat, according to the study analysis. Research also shows keto athletes have a higher VO2 max, and are able to lose fat without losing strength or power.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Cons:</span>
+              <span class="sub-heading-desc">That same study on the perks of being a keto athlete also found those same dieters had a lower exercise economy (how efficiently you use oxygen while moving). And whereas pretty much every other diet offers flexibility in the macro range, eating a few too many grams of carbs or protein will knock your body out of ketosis, so you have to be pretty committed to see the perks of this one Opens a New Window. . Lastly, the low protein count required to stay in ketosis may be holding you back here: A study analysis in Nutrition, Metabolism, and Cardiovascular Diseases Opens a New Window.  found upping protein on a keto diet by just 5% tripled fat loss.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="high-protein" class="diets-item">
+          <h2>High Protein Diet</h2>
+          <img src='/src/images/high-protein-diet.jpg' alt="low-calorie"/>
+          <div class="diet-item-desc">
+            <div>
+              <span class="sub-heading">Defined as:</span>
+              <span class="sub-heading-desc">At least 25% of daily calories from protein.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Pros:</span>
+              <span class="sub-heading-desc"> The most consistently beneficial of all diets here, study after study shows that upping your protein intake can help significantly reduce body fat and build lean muscle. For example: Guys who ran sprint intervals, did resistance training, and ate a diet of 2.4g of protein per kg of bodyweight per day (roughly 1g per lb of bodyweight) gained 1.2kg of lean muscle and lost almost 5kg of fat in just four weeks, according to a study in the American Journal of Clinical Nutrition Opens a New Window. . If you cut calories but eat high protein, the macro can help prevent your metabolism from plummeting and help keep hunger at bay, since protein is so satiating. The study analysis also confirmed that eating a ton of protein stuff doesn’t cause you to gain weight or harm any internal systems, despite myths Opens a New Window.</span>
+            </div>
+
+            <div>
+              <span class="sub-heading">Cons:</span>
+              <span class="sub-heading-desc"> With the focus on protein, it’s easy to forget you need to eat enough fat or carbs to fuel your workouts, so keep an eye on your energy levels and other macros. And that’s the only real downside. The only other con the study analysis found: High protein is so effective in making you less hungry that it might hurt your efforts to gain weight.</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <footer class="footer">
-        <span class="copyright-text">Copyrights@2018</span>
-        <span class="made-by-text">Made by Akash Pandey</span>
+
+      <footer class="footer no_select">
+        <span class="copyright-text">Copyright&copy;2018</span>
+        <span class="links">
+          <a href="https://www.facebook.com/aakash.pandey.182?ref=bookmarks" target="_blank"><img src="src/images/facebook.svg"/></a>
+          <a href="https://github.com/akashpandey2193" target="_blank"><img src="src/images/github.svg"/></a>
+          <!-- <a href="akashpandey2193@gmail.com" target="_blank"><img src="src/images/gmail.svg"/></a> -->
+          <a href="https://www.linkedin.com/in/akash-pandey43" target="_blank"><img src="src/images/linkedin.svg"/></a>
+        </span>
+        <span class="author-text" title="made by me">Akash Pandey</span>
       </footer>
     </body>
 </html>
