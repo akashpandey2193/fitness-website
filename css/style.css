@@ -158,7 +158,8 @@ a:link, a:visited {
   background-image: linear-gradient(to right bottom,rgba(23, 114, 227, 0.28), rgba(40, 77, 180, 0.01)),url('/src/images/background.jpg');
   background-position:bottom;
   background-size: cover;
-  height: 87vh;
+  height: 82vh;
+  
   clip-path: polygon(0 0 , 100% 0, 100% 90%, 0 100%);
 }
 
